@@ -1,0 +1,45 @@
+{% extends "./base.html" %}
+
+{% block title %} Formulario de Cotizaciones {% endblock %}
+
+{% block body %}
+<div class="row ">
+    <div class=" mx-auto col-xs-12 col-md- col-lg-4 col-xl-4">
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-dismissible alert-success">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong class="text-dark">{{ message }}</strong>
+        </div>
+        {% endfor %}
+        {% endif %}
+        <h2>Formulario Cotizaciones</h2>
+        <div class="card">
+            <div class="card-body">
+                <form action="/registrarQuotes2/" enctype="multipart/form-data" method="POST">{% csrf_token %}
+                    <!-- <div class="form-group">
+                        <input type="text" id="txtCodigo" name="txtCodigo" class="form-control" placeholder="Codigo"
+                            minlength="6" maxlength="6" required>
+                    </div> -->
+                     <div class="form-group">
+                        <input type="text" id="txtName" name="txtName" class="form-control" placeholder="Nombre"
+                            maxlength="50" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtDescription" name="txtDescription" class="form-control" placeholder="Descripción"
+                            maxlength="50" required>
+                    </div>
+                    <!-- <div class="form-group">
+                        <input type="text" id="numValue" name="numValue" class="form-control" placeholder="Valor"
+                            required>
+                    </div> -->
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-block text-white">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
