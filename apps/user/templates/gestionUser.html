@@ -30,16 +30,40 @@
                             maxlength="50" required>
                     </div>
                     <div class="form-group">
+                        <input type="text" id="numDocument" name="numDocument" class="form-control" placeholder="Numero de Documento"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="numPhone" name="numPhone" class="form-control" placeholder="Telefono"
+                            required>
+                    </div>
+                    <div class="form-group">
                         <input type="text" id="txtMail" name="txtMail" class="form-control" placeholder="Gmail"
+                            maxlength="50" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtAddress" name="txtAddress" class="form-control" placeholder="Dirección"
+                            maxlength="50" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtCity" name="txtCity" class="form-control" placeholder="Ciudad"
+                            maxlength="50" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtState_province" name="txtState_province" class="form-control" placeholder="Estado-Provincia"
+                            maxlength="50" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtCountry" name="txtCountry" class="form-control" placeholder="País"
+                            maxlength="50" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtWebsite" name="txtWebsite" class="form-control" placeholder="Sitio Web"
                             maxlength="50" required>
                     </div>
                     <div class="form-group">
                         <input type="text" id="txtUser_name" name="txtUser_name" class="form-control" placeholder="Nombre de Usuario"
                             maxlength="50" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="numDocument" name="numDocument" class="form-control" placeholder="Numero de Documento"
-                            required>
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-success btn-block text-white">Guardar</button>
@@ -57,9 +81,15 @@
                         <th>Id</th>
                         <th>Nombres</th>
                         <th>Apellidos</th>
-                        <th>Gmail</th>
-                        <th>Nombre de Usuario</th>
                         <th>Documento</th>
+                        <th>Telefono</th>
+                        <th>Gmail</th>
+                        <th>Dirección</th>
+                        <th>Ciudad</th>
+                        <th>Estado-Provincia</th>
+                        <th>País</th>
+                        <th>Sitio Web</th>
+                        <th>Nombre de Usuario</th>
                         <th colspan="2">Opciones</th>
                     </tr>
                 </thead>
@@ -69,9 +99,15 @@
                         <td>{{c.id}}</td>
                         <td>{{c.name}}</td>
                         <td>{{c.last_name}}</td>
-                        <td>{{c.mail}}</td>
-                        <td>{{c.user_name}}</td>
                         <td>{{c.document}}</td>
+                        <td>{{c.phone}}</td>
+                        <td>{{c.mail}}</td>
+                        <td>{{c.address}}</td>
+                        <td>{{c.city}}</td>
+                        <td>{{c.state_province}}</td>
+                        <td>{{c.country}}</td>
+                        <td>{{c.website}}</td>
+                        <td>{{c.user_name}}</td>
                         <td><a href="edicionUser/{{c.id}}" class="btn btn-info">Editar</a></td>
                         <td><a href="eliminarUser/{{c.id}}" class="btn btn-danger btnEliminacion">Eliminar</a></td>
                     </tr>
