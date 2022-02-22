@@ -19,26 +19,29 @@ def homee(request):
 def registrarQuotes(request):
     # codigo = request.POST['txtCodigo']
     name = request.POST['txtName']
+    document = request.POST['numDocument']
+    phone = request.POST['numPhone']
+    mail = request.POST['txtMail']
+    typematerial = request.POST['txtTypematerial']
     description = request.POST['txtDescription']
-    # mail = request.POST['txtMail']
-    # user_name = request.POST['txtUser_name']
-    # document = request.POST['numDocument']
+
 
     quotes = Quotes.objects.create(
-        name=name, description=description)
+        name=name, document=document, phone=phone, mail=mail, typematerial=typematerial, description=description)
     messages.success(request, '¡Cotizacion registra!')
     return redirect('/home2')
 
 def registrarQuotes2(request):
     # codigo = request.POST['txtCodigo']
     name = request.POST['txtName']
+    document = request.POST['numDocument']
+    phone = request.POST['numPhone']
+    mail = request.POST['txtMail']
+    typematerial = request.POST['txtTypematerial']
     description = request.POST['txtDescription']
-    # mail = request.POST['txtMail']
-    # user_name = request.POST['txtUser_name']
-    # document = request.POST['numDocument']
 
     quotes = Quotes.objects.create(
-        name=name, description=description)
+        name=name, document=document, phone=phone, mail=mail, typematerial=typematerial, description=description)
     messages.success(request, '¡Cotizacion registra!')
     return redirect('/home2e')
 
@@ -52,17 +55,20 @@ def edicionQuotes(request, id):
 def editarQuotes(request):
     # codigo = request.POST['txtCodigo']
     name = request.POST['txtName']
+    document = request.POST['numDocument']
+    phone = request.POST['numPhone']
+    mail = request.POST['txtMail']
+    typematerial = request.POST['txtTypematerial']
     description = request.POST['txtDescription']
-    # mail = request.POST['txtMail']
-    # user_name = request.POST['txtUser_name']
-    # document = request.POST['numDocument']
 
     quotes = Quotes.objects.get(id=id)
     quotes.name = name
+    quotes.document = document
+    quotes.phone = phone
+    quotes.mail = mail
+    quotes.typematerial = typematerial
     quotes.description = description
-    # user.mail = mail
-    # user.user_name = user_name
-    # user.document = document
+
     quotes.save()
 
     messages.success(request, '¡Cotizacion actualizada!')

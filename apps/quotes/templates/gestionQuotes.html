@@ -26,6 +26,22 @@
                             maxlength="50" required>
                     </div>
                     <div class="form-group">
+                        <input type="text" id="numDocument" name="numDocument" class="form-control" placeholder="Numero de Documento"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="numPhone" name="numPhone" class="form-control" placeholder="Telefono"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtMail" name="txtMail" class="form-control" placeholder="Gmail"
+                            maxlength="50" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtTypematerial" name="txtTypematerial" class="form-control" placeholder="Tipo Material"
+                            maxlength="50" required>
+                    </div>
+                    <div class="form-group">
                         <input type="text" id="txtDescription" name="txtDescription" class="form-control" placeholder="Descripción"
                             maxlength="50" required>
                     </div>
@@ -48,6 +64,10 @@
                     <tr>
                         <th>Id</th>
                         <th>Nombre</th>
+                        <th>Documento</th>
+                        <th>Telefono</th>
+                        <th>Gmail</th>
+                        <th>Tipo de Material</th>
                         <th>Descripción</th>
                         <!-- <th>Valor</th> -->
                         <th colspan="2">Opciones</th>
@@ -58,6 +78,10 @@
                     <tr>
                         <td>{{e.id}}</td>
                         <td>{{e.name}}</td>
+                        <td>{{e.document}}</td>
+                        <td>{{e.phone}}</td>
+                        <td>{{e.mail}}</td>
+                        <td>{{e.typematerial}}</td>
                         <td>{{e.description}}</td>
                         <!-- <td>{{d.value}}</td> -->
                         <td><a href="edicionQuotes/{{e.id}}" class="btn btn-info">Editar</a></td>

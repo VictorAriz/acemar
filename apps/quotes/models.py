@@ -5,6 +5,10 @@ from django.db import models
 
 class Quotes(models.Model):
     name = models.CharField(max_length=50)
+    document = models.PositiveSmallIntegerField(null=True)
+    phone = models.PositiveSmallIntegerField(null=True)
+    mail = models.EmailField(null=True)
+    typematerial = models.CharField(max_length=50, null=True)
     description = models.TextField()
     # text = models.CharField(max_length=50, null=True)
 
