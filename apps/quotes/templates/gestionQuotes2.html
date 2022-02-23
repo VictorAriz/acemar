@@ -4,7 +4,7 @@
 
 {% block body %}
 <div class="row ">
-    <div class=" mx-auto col-xs-12 col-md- col-lg-4 col-xl-4">
+    <div class="col-12 col-md-8 mx-auto">
         {% if messages %}
         {% for message in messages %}
         <div class="alert alert-dismissible alert-success">
@@ -13,7 +13,11 @@
         </div>
         {% endfor %}
         {% endif %}
-        <h2>Formulario Cotizaciones</h2>
+        <p></p>
+        <div class="d-flex justify-content-center">
+            <h2>Formulario Cotizaciones</h2>
+        </div>
+        <p></p>
         <div class="card">
             <div class="card-body">
                 <form action="/registrarQuotes2/" enctype="multipart/form-data" method="POST">{% csrf_token %}
@@ -21,6 +25,176 @@
                         <input type="text" id="txtCodigo" name="txtCodigo" class="form-control" placeholder="Codigo"
                             minlength="6" maxlength="6" required>
                     </div> -->
+                    <div class="mb-3 row">
+                    <label for="staticEmail" class="col-6 col-form-label">Tipo de puerta</label>
+                    <div class="col-6">
+                        <select class="form-control" aria-label="Default select example">
+                            <option selected>Solo Vidrio</option>
+                            <option value="1">Madera</option>
+                            <option value="2">Losa</option>
+                            <option value="3">Aluminio</option>
+                        </select>
+                    </div>
+                    </div>
+                    <div class="mb-3 row">
+                    <label for="staticEmail" class="col-6 col-form-label">Recuento de Hojas</label>
+                    <div class="col-6">
+                        <select class="form-control" aria-label="Default select example">
+                            <option selected>Unica</option>
+                            <!-- <option value="1">Opción 2</option>
+                            <option value="2">Opción 3</option> -->
+                        </select>
+                    </div>
+                    </div>
+                    <p></p>
+                    <label class="font-weight-bold" for="staticEmail" class="col-6 col-form-label">JAMBA</label>
+                    <p></p>
+                    <div class="mb-3 row">
+                    <label for="staticEmail" class="col-6 col-form-label">Manjeo de puerta</label>
+                    <div class="col-6">
+                        <select class="form-control" aria-label="Default select example">
+                            <option selected>Sin entregar</option>
+                            <option value="1">Otra Opción</option>
+                            <!-- <option value="2">Losa</option>
+                            <option value="3">Aluminio</option> -->
+                        </select>
+                    </div>
+                    </div>
+                    <div class="mb-3 row">
+                    <label for="staticEmail" class="col-6 col-form-label">Biselado de puertas</label>
+                    <div class="col-6">
+                        <select class="form-control" aria-label="Default select example">
+                            <option selected>Sin bisel</option>
+                            <option value="1">Con bisel</option>
+                            <!-- <option value="2">Losa</option>
+                            <option value="3">Aluminio</option> -->
+                        </select>
+                    </div>
+                    </div>
+                    <div class="mb-3 row">
+                    <label for="staticEmail" class="col-6 col-form-label">Estilo de puerta</label>
+                    <div class="col-6">
+                        <select class="form-control" aria-label="Default select example">
+                            <option selected>TS2020</option>
+                            <option value="1">RT6050</option>
+                            <!-- <option value="2">Losa</option>
+                            <option value="3">Aluminio</option> -->
+                        </select>
+                    </div>
+                    </div>
+                    <p></p>
+                    <label class="font-weight-bold" for="staticEmail" class="col-8 col-form-label">PARTE SUPERIOR DE LA PUERTA</label>
+                    <p></p>
+                    <div class="mb-3 row">
+                    <label for="staticEmail" class="col-6 col-form-label">Grado de puerta</label>
+                    <div class="col-6">
+                        <select class="form-control" aria-label="Default select example">
+                            <option selected>Interior</option>
+                            <!-- <option value="1">Otra Opción</option> -->
+                            <!-- <option value="2">Losa</option>
+                            <option value="3">Aluminio</option> -->
+                        </select>
+                    </div>
+                    </div>
+                    <div class="mb-3 row">
+                    <label for="staticEmail" class="col-6 col-form-label">Sustitucion de paneles</label>
+                    <div class="col-6">
+                        <select class="form-control" aria-label="Default select example">
+                            <option selected>Ninguna</option>
+                            <!-- <option value="1">Otra</option> -->
+                            <!-- <option value="2">Losa</option>
+                            <option value="3">Aluminio</option> -->
+                        </select>
+                    </div>
+                    </div>
+                    <p></p>
+                    <label class="font-weight-bold" for="staticEmail" class="col-10 col-form-label">MATERIAL Y CLASIFICACION DE FUEGO</label>
+                    <p></p>
+                    <div class="mb-3 row">
+                    <label for="staticEmail" class="col-6 col-form-label">Material</label>
+                    <div class="col-6">
+                        <select class="form-control" aria-label="Default select example">
+                            <option selected>MDF</option>
+                            <option value="1">MJK</option>
+                            <!-- <option value="2">Losa</option>
+                            <option value="3">Aluminio</option> -->
+                        </select>
+                    </div>
+                    </div>
+                    <div class="mb-3 row">
+                    <label for="staticEmail" class="col-6 col-form-label">Resistencia al fuego</label>
+                    <div class="col-6">
+                        <select class="form-control" aria-label="Default select example">
+                            <option selected>No clasificado</option>
+                            <option value="1">CLasificado</option>
+                            <!-- <option value="2">Losa</option>
+                            <option value="3">Aluminio</option> -->
+                        </select>
+                    </div>
+                    </div>
+                    <p></p>
+                    <label class="font-weight-bold" for="staticEmail" class="col-6 col-form-label">DIMENSIONES</label>
+                    <p></p>
+                    <div class="mb-3 row">
+                    <label for="staticEmail" class="col-6 col-form-label">Ancho (pulgadas/cm)</label>
+                    <div class="col-6">
+                        <div class="form-outline">
+                          <input type="number" id="typeAncho" class="form-control" min="0" />
+                        </div>
+                    </div>
+                    </div>
+                    <div class="mb-3 row">
+                    <label for="staticEmail" class="col-6 col-form-label">Ancho preajustado</label>
+                    <div class="col-6">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                          <label class="form-check-label" for="inlineCheckbox1">1/8"</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                          <label class="form-check-label" for="inlineCheckbox2">3/16"</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                          <label class="form-check-label" for="inlineCheckbox3">1/4"</label>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="mb-3 row">
+                    <label for="staticEmail" class="col-6 col-form-label">Altura (en)</label>
+                    <div class="col-6">
+                        <div class="form-outline">
+                          <input type="number" id="typeAltura" class="form-control" min="0"/>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="mb-3 row">
+                    <label for="staticEmail" class="col-6 col-form-label">Grosor</label>
+                    <div class="col-6">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                          <label class="form-check-label" for="inlineCheckbox1">1-3/8"</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                          <label class="form-check-label" for="inlineCheckbox2">1-3/4"</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                          <label class="form-check-label" for="inlineCheckbox3">2-1/4"</label>
+                        </div>
+                    </div>
+                    </div>
+
+
+
+
+                    <!-- <div class="mb-3 row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputPassword">
+                    </div>
+                    </div>
                     <div class="form-group">
                         <input type="text" id="txtName" name="txtName" class="form-control" placeholder="Nombre"
                             maxlength="50" required>
@@ -44,13 +218,17 @@
                     <div class="form-group">
                         <input type="text" id="txtDescription" name="txtDescription" class="form-control" placeholder="Descripción"
                             maxlength="50" required>
-                    </div>
+                    </div> -->
                     <!-- <div class="form-group">
                         <input type="text" id="numValue" name="numValue" class="form-control" placeholder="Valor"
                             required>
                     </div> -->
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-success btn-block text-white">Guardar</button>
+                    <p></p>
+                    <div class="form-group d-flex justify-content-center">
+                        <p></p>
+                        <button type="button" class="btn btn-warning btn-lg text-white">Cotizar</button>
+                        <!-- <button type="button" class="btn btn-outline-warning">Cotizar</button> -->
+                        <!-- <button type="submit" class="btn btn-success btn-block text-white">Guardar</button> -->
                     </div>
                 </form>
             </div>
